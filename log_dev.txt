@@ -1,0 +1,366 @@
+commit a6b5cdf0bee12b85e34f0a64a9e1ad532f451e28
+Author: Yazan <yazanaljannoud@gmail.com>
+Date:   Tue Jan 10 01:52:18 2023 +0100
+
+    Added project report.
+
+commit 92ee4e84c4c30992c561862355a4db69e3f54c7b
+Author: Victor Fraize <vfraize3@gmail.com>
+Date:   Tue Jan 10 01:46:05 2023 +0100
+
+    Moved the Doxygen documentation in doc/Doxygen doc/.
+
+commit ad61602761fba09a104ea7b38761c7fb26884452
+Author: Victor Fraize <vfraize3@gmail.com>
+Date:   Tue Jan 10 01:18:40 2023 +0100
+
+    Generated the documentation with doxygen in docs.
+
+commit c2b2732d75ef33347a7cf4299018e73593811c4c
+Author: Victor Fraize <vfraize3@gmail.com>
+Date:   Tue Jan 10 01:16:13 2023 +0100
+
+    Added a comment to the structure Score.
+
+commit b7316097c8f91f3e36b4f131009d8491c5d6708a
+Author: Victor Fraize <vfraize3@gmail.com>
+Date:   Tue Jan 10 01:13:14 2023 +0100
+
+    Added the modifier @brief on some comments.
+
+commit f394d75e63ca14eb6e4f8bbc80784f670bf25bc6
+Author: Victor Fraize <vfraize3@gmail.com>
+Date:   Tue Jan 10 00:14:24 2023 +0100
+
+    Added some documentation.
+
+commit 49a95b4aad86cf77ec1547609e2e04d962f32716
+Author: Victor Fraize <vfraize3@gmail.com>
+Date:   Mon Jan 9 22:31:49 2023 +0100
+
+    Added new tile sprite.
+    Changed winning_screen and losing_screen so they are displayed before winning and losing actions.
+    Removed an fprintf in Ranking.c in get_score_list
+
+commit 570c84b7913c5e7221f192776c204c68facb47e8
+Author: Yazan <yazanaljannoud@gmail.com>
+Date:   Mon Jan 9 20:52:52 2023 +0100
+
+    Deleted scores file
+
+commit c42ceda5a6a7cc27326fa0981c4345851210ea79
+Author: Yazan <yazanaljannoud@gmail.com>
+Date:   Mon Jan 9 20:46:21 2023 +0100
+
+    reformatted the project files code, updated the Makefile
+
+commit dc83878b44d2eeec4d780480dd690c56c1432189
+Author: Yazan <yazanaljannoud@gmail.com>
+Date:   Mon Jan 9 20:18:09 2023 +0100
+
+    Added sound effects.
+
+commit 779b2c78a333fcf886f6f7ee94de9c72da4af6e0
+Author: Victor Fraize <vfraize3@gmail.com>
+Date:   Mon Jan 9 18:18:26 2023 +0100
+
+    I forgot to free the ressources when the player loses.
+
+commit 7162587e81be44e5f3e7f9b93a891f9c2fbaecd1
+Author: Victor Fraize <vfraize3@gmail.com>
+Date:   Mon Jan 9 17:31:54 2023 +0100
+
+    Added a folder to store the fonts named 'font' and added a nAdded a new font.ew font in it.
+    Added 4 new sprites to the sprites folder.
+    In Graphics.h, added a new structure 'Button' to store the information about a Button on the menu and 6 new functions.
+    In Graphics.c, optimized displayTerrain a bit, modified display_guardian so it can display the guardian's sprites, added a function to display the mana on screen, modified draw_window to support those changes, added a function to initialize a button, added a function to change the appearance of a button when the mouse is over it, added a function to display one button and another to diplay several ones, added a function to check on which button the user clicked, added functions to display a winning or losing and another to chose which function to call, added functions to display a leaderboard on the menu.
+    In Player.h, added a sprite and a speed cap to the player and a function handling the invisibility spell.
+    In Player.c, changed generate_player and increase_player_speed to support the changes made in Player.h, changed parse_move_player so the player doesn't stop its movement if the user uses a keyboard button that isn't ZQSD or the movement arrow, initialized the mana of the player to -1 so there's always an empty tile on the board under the player, added functions to handle the invisibility spell and the speed spell, changed player_movements_handler to support those changes.
+    In Ranking.h, added the comparison functions.
+    In Ranking.c, refactored display_high_scores so we can now have a function to get a list of Score from the Scores file.
+    Moved the macro max_speed from Player.h to Terrain.h
+    Fixed a bug where the guardians would ignore a wall by changing the function check_next_collision in Hitbox.c.
+    In Main.c, moved all the main in a new function game, the main will now contain the code for the menu, made some changes in game to support those changes, added the invisibility spell, added a function to display the leaderboard, modified so we now have a functionning menu.
+
+commit 4d2f7ab3c1b1b35ffa8571f9634c7a530bdb6e88
+Author: Victor Fraize <vfraize3@gmail.com>
+Date:   Wed Jan 4 16:43:43 2023 +0100
+
+    Created a ressource folder named 'res' to store the sprites, sound effects and musics.
+    Moved the initialization of the sound effects in a function.
+    Added sprites to the tiles, guardians and the player. Modified Graphics.c to support those changes.
+    Changed the field 'color' in the struct Guardian in Guardian.h by sprites and the functions calling this field.
+
+commit f6d347b30c118c1b465d10616669fa1fa695edba
+Author: Yazan <yazanaljannoud@gmail.com>
+Date:   Fri Dec 30 17:39:42 2022 +0100
+
+    Changed the events order in the main function, added relic pickup sound.
+    
+    Changed the events order in the main function so that the window gets drawn after the events not before them.
+
+commit 9070091fd5b4fe3947fb7a7aa58dd37ca2abf170
+Author: Yazan <yazanaljannoud@gmail.com>
+Date:   Fri Dec 30 11:54:25 2022 +0100
+
+    Minor changes to macros and window size
+
+commit eb5c98afab8bef0b89ecd2d7e3075f4f78de67e8
+Author: Yazan <yazanaljannoud@gmail.com>
+Date:   Thu Dec 29 19:35:32 2022 +0100
+
+    Minor changes to sounds
+
+commit 533aec90b08e2b71c274151f641c2588b2a6b16b
+Author: Yazan <yazanaljannoud@gmail.com>
+Date:   Tue Dec 27 20:42:52 2022 +0100
+
+    Added some sounds
+
+commit 37f59cea0d6b5a52782789efff9545c1ad354544
+Author: Yazan <yazanaljannoud@gmail.com>
+Date:   Tue Dec 27 00:01:32 2022 +0100
+
+    Fixed a warning in Hitbox.c
+
+commit 8b988bab905f739f35f9aeffd4ba6f322546ce31
+Author: Yazan <yazanaljannoud@gmail.com>
+Date:   Mon Dec 26 21:49:26 2022 +0100
+
+    Wrote a round function, fixed some warnings
+
+commit 5452ee742115a48d4450c2b13fe28b52272adee9
+Author: Yazan <yazanaljannoud@gmail.com>
+Date:   Mon Dec 26 02:55:17 2022 +0100
+
+    Refactored some code in Main.c, fixed some warnings
+
+commit 58683f415cc9e391015fe94e4c4d2896fb3e04a7
+Author: Victor Fraize <vfraize3@gmail.com>
+Date:   Sun Dec 25 14:10:31 2022 +0100
+
+    Many little changes.
+    Fixed typo in the Makefile.
+    Moved ENTITY_DIAMETER from Graphics.h to Hitbox.h so Guardian.c doesn't include Graphics.h.
+    Fixed a problem with the <time.h> lib in Guardian.h.
+    Changed the spawn point of the player by 2 pixels so it doesn't spawn in a wall, causing the player to be unable to move.
+
+commit 4c7ad917da25af65d31a408e2a3b7fc6899a670b
+Author: Yazan <yazanaljannoud@gmail.com>
+Date:   Fri Dec 23 00:27:43 2022 +0100
+
+    Added documentation for the Ranking module.
+
+commit b10697a1b924155f066fce83feab8dc025a228cc
+Author: Yazan <yazanaljannoud@gmail.com>
+Date:   Fri Dec 23 00:09:51 2022 +0100
+
+    Added a new module that manages the ranking table.
+
+commit 579fb0f08997249294abc65d408c615598e860fc
+Author: Yazan <yazanaljannoud@gmail.com>
+Date:   Wed Dec 21 01:23:35 2022 +0100
+
+    Improved the terrain generation function
+
+commit 4095da7dd4a1ef500c38da2dc610169f71fc2741
+Author: Yazan <yazanaljannoud@gmail.com>
+Date:   Tue Dec 20 22:30:12 2022 +0100
+
+    Many miscellaneous changes.
+    
+    Guardians in panic mode now changed directions before hitting a wall.
+    Added missing documentation to functions in Guardian.h.
+    Completed some documentations in Hitbox.c and Hitbox.h.
+    Added a new parameter, `sensitivity` to Hitbox functions.
+
+commit 6f7a1e7fef631ab47135692c888646d7a94e2632
+Author: Yazan <yazanaljannoud@gmail.com>
+Date:   Tue Dec 20 00:45:27 2022 +0100
+
+    Big changes
+    
+    Added the necessary functions to allow guardians to detect missing relics, move, enter and exit panic mode : changed the main accordingly.
+    Modified the `check_entity_move` function so that it returns 1 if a collision has been detected.
+    Added the functions that allow the player to pick up mana and relics.
+    Simplified the `generate_inner_walls` : it no longer requires `orientation` as a parameter.
+    Replaced every call to rand in the projet by the range function for visibility.
+
+commit 80d098ed6ac4828b9c7344dab9801faf602ceb0e
+Author: Yazan <yazanaljannoud@gmail.com>
+Date:   Mon Dec 19 14:24:48 2022 +0100
+
+    Fixed the detection of the player by the guardians
+
+commit a994fdea3ffa6014759ad95534fdffab10e9fdb9
+Author: Victor Fraize <vfraize3@gmail.com>
+Date:   Sun Dec 18 13:44:56 2022 +0100
+
+    Added function to calculate the collision, the code being a bit we'll need to refactor it.
+    Added a function to Terrain so we can get the index of tile based on coordinate on the window.
+    Updated the Main to implement those changes.
+
+commit 58f9704a9bc55d67a7201a15e28413023b43e137
+Author: Yazan <yazanaljannoud@gmail.com>
+Date:   Sat Dec 17 22:51:43 2022 +0100
+
+    Graphical changes
+    
+    Mana now spawn everywhere, improved the tile drawing function
+
+commit 361c1eaa18672fb9786781afd923d0c698cba1bf
+Author: Yazan <yazanaljannoud@gmail.com>
+Date:   Fri Dec 16 23:41:10 2022 +0100
+
+    Refactored tile display functions in Graphics.c
+
+commit 9bd763bbdbe7977b3d2625b166daa575710184cb
+Author: Yazan <yazanaljannoud@gmail.com>
+Date:   Fri Dec 16 22:17:51 2022 +0100
+
+    Miscellaneous
+    
+    Added a function that determines if player has won, added the ENTRY field to the TILE enumeration, added the function to display the entry section
+
+commit 9f3239a0fe5270298ffb656edc9e3b6f8cf934c6
+Author: Yazan <yazanaljannoud@gmail.com>
+Date:   Thu Dec 15 23:59:31 2022 +0100
+
+    Fixed x, y, i, j bugs
+
+commit b876e9f4d9b67522200a9a92d75ec69968801bdd
+Author: Yazan <yazanaljannoud@gmail.com>
+Date:   Thu Dec 15 18:14:43 2022 +0100
+
+    Added a placement verification function.
+    
+    Added the function that ensures a guardian or a relic never spawns on a chamber entrance.
+
+commit 9867602e1e330b5ebf487a8986bc8b1156afdfac
+Merge: c729b56 d3c03c8
+Author: Yazan <yazanaljannoud@gmail.com>
+Date:   Tue Dec 13 15:32:22 2022 +0100
+
+    Merge remote-tracking branch 'origin/master'
+
+commit c729b5638eea4348ff2e807637ccd98ecd50c179
+Author: Yazan <yazanaljannoud@gmail.com>
+Date:   Tue Dec 13 15:13:12 2022 +0100
+
+    Replaced floorf by floor because C ansi doesn't support it, added -lm to makefile
+
+commit d3c03c8cca677ad0ae27e0cb8e5b57be0ba4174c
+Author: Victor Fraize <vfraize3@gmail.com>
+Date:   Tue Dec 13 13:51:16 2022 +0100
+
+    Added the documentation in Player.c
+    Fixed a little bug in an if statement due to the change of the struct
+    Direction
+
+commit da3ce9e587a38e12263048ed570620e59c2bc33d
+Author: Yazan <yazanaljannoud@gmail.com>
+Date:   Sun Dec 11 02:20:27 2022 +0100
+
+    Added the main while loop, changed the way the window is displayed.
+    
+    Also, a slight modification in Player.h and Player.c to adapt the directions, so they can be used by the guardians
+
+commit 21548d8193a998c0d80e90381df3f9f3aa0c5c98
+Author: Yazan <yazanaljannoud@gmail.com>
+Date:   Sat Dec 10 19:34:44 2022 +0100
+
+    Added the `const` modifier to some function parameters
+
+commit 9f14c377af0205dee5417a872dda16adc451a07d
+Author: Yazan <yazanaljannoud@gmail.com>
+Date:   Sat Dec 10 18:14:29 2022 +0100
+
+    Added the function that allows guardians to detect a player
+    
+    Small changes to Graphics.c
+
+commit 59e9f03cbd798e8c28de70a72340c2ec5cf8daea
+Author: Victor Fraize <vfraize3@gmail.com>
+Date:   Sat Dec 10 12:52:49 2022 +0100
+
+    Added the fonctions that handles the player movements
+
+commit cbf9182b6fe58f3dfdb130815b0f01869163d274
+Author: Yazan <yazanaljannoud@gmail.com>
+Date:   Fri Dec 9 20:05:17 2022 +0100
+
+    Fixed the `get_valid_placement` in Guardian.c
+
+commit fc158071888106ebfb450fcb0b8dedf74e34b3c5
+Author: Yazan <yazanaljannoud@gmail.com>
+Date:   Fri Dec 9 00:52:56 2022 +0100
+
+    Added guardians generation and display
+
+commit fb6c0c5d766ffdefa66bc323508b5f216232f8bf
+Author: Yazan <yazanaljannoud@gmail.com>
+Date:   Thu Dec 1 02:42:41 2022 +0100
+
+    Added missing documentation to a function.
+
+commit 572f956afdb8b477b220808088a545c07485419c
+Author: Yazan <yazanaljannoud@gmail.com>
+Date:   Thu Dec 1 02:35:18 2022 +0100
+
+    Finished terrain generation algorithm and associated functions
+
+commit 0cacdfbbb4eadff8d6de9a2362417d83a8ca71ff
+Author: Yazan <yazanaljannoud@gmail.com>
+Date:   Wed Nov 30 23:24:59 2022 +0100
+
+    Added a terrain generation function prototype
+
+commit bec57d2a81ffd6b5b5c6ec0f1c13c056a63d79c0
+Author: Yazan <yazanaljannoud@gmail.com>
+Date:   Mon Nov 28 22:51:51 2022 +0100
+
+    Added a terrain generation function prototype
+
+commit 182c07d4b816aa367ac795314dec09dfa6150379
+Author: Yazan <yazanaljannoud@gmail.com>
+Date:   Sun Nov 27 18:10:44 2022 +0100
+
+    Updated the Makefile
+    
+    makefile will always have to be updated to account for the new dependencies that will be added during development
+
+commit 05926dc0295ca2c2e6bc0cd27c94f67eb80ebf2a
+Author: Victor Fraize <vfraize3@gmail.com>
+Date:   Sat Nov 26 23:51:09 2022 +0100
+
+    Added a structure to represent the Terrain and a function to display it
+
+commit 5a757c9acb7801c94da0548af54e83b119be57a7
+Author: Victor Fraize <vfraize3@gmail.com>
+Date:   Sat Nov 26 13:59:04 2022 +0100
+
+    Improved the Makefile
+
+commit c5f914ccf32a5df86fcd393e2e7100bc971a63bf
+Author: Victor Fraize <vfraize3@gmail.com>
+Date:   Wed Nov 16 17:00:22 2022 +0100
+
+    Changed the makefile so it can compile the project and clean the folder 'bin'
+
+commit 621a6e59f0fbba91d6cf1d50df7b5d09fc3a8b43
+Author: Victor Fraize <vfraize3@gmail.com>
+Date:   Fri Nov 4 19:58:54 2022 +0100
+
+    first commit
+
+commit a82e5b53094b896fa389ba681cc2d53d4bd1ded2
+Author: Yazan <yazanaljannoud@gmail.com>
+Date:   Fri Nov 4 17:10:11 2022 +0100
+
+    Added the project directories and source and header files
+
+commit 38e89f6614682cb4d4d14de6bbcdc8545264ee31
+Author: Yazan <yazanaljannoud@gmail.com>
+Date:   Fri Nov 4 16:53:53 2022 +0100
+
+    Added the project directories and source and header files
